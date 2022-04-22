@@ -1,19 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager GMInstance;
+    public InputField playerNameInputField;
+    public static GameManager GMInstance;
 
+    public string playerName = "No Name";
     private void Awake()
     {
         if (GMInstance != null)
         {
+            Destroy(gameObject);
             return;
         }
 
         GMInstance = this;
         DontDestroyOnLoad(this);
+    }
+
+    public void SetPlayerName()
+    {
+        if (playerNameInputField.text != "")
+        {
+            playerName = playerNameInputField.text;
+            return;
+        }
+        else
+        {
+            playerName = "Bob";
+        }
     }
 }

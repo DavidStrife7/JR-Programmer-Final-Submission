@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuStartGame : MonoBehaviour
 {
-    void StartGame()
+    private GameManager GM;
+    private void Start()
     {
+        GM = GameManager.GMInstance;
+    }
 
+    public void StartGame()
+    {
+        GM.SetPlayerName();
     }
 }
