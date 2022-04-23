@@ -14,5 +14,6 @@ public class MainMenuStartGame : MonoBehaviour
     public void StartGame()
     {
         GM.SetPlayerName();
+        SceneManager.LoadScene("Game");
     }
 }
