@@ -15,7 +15,7 @@ public class TextUpdate : MonoBehaviour
         UpdatePlayerName();
     }
 
-    private void UpdatePlayerName()
+    private void UpdatePlayerName() // ABSTRACTION
     {
         welcomeText.text = "Welcome " + GM.playerName + "!";
     }

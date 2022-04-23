@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public InputField playerNameInputField;
-    public static GameManager GMInstance { get; private set; }
+    public static GameManager GMInstance { get; private set; } // ENCAPSULATION
 
     public string playerName = "No Name";
     private void Awake()
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    public void SetPlayerName()
+    public void SetPlayerName() // ABSTRACTION
     {
         if (playerNameInputField.text != "")
         {
