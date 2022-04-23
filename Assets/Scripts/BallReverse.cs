@@ -21,12 +21,12 @@ public class BallReverse : BallDefault
 
     private void Update()
     {
-        if (Input.GetKeyDown("UpArrow"))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             MoveDown();
         }
 
-        if (Input.GetKeyDown("UpArrow"))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
             MoveUp();
         }

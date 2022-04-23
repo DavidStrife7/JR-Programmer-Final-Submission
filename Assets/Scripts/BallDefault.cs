@@ -22,12 +22,12 @@ public class BallDefault : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("UpArrow"))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             MoveUp();
         }
 
-        if (Input.GetKeyDown("UpArrow"))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
             MoveDown();
         }
